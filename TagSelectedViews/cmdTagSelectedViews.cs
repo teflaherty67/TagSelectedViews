@@ -35,7 +35,7 @@ namespace TagSelectedViews
                 "Staris", "Structrual Columns", "Structural Framing", "Walls", "Windows" };
 
             // get all the tags for the categories
-            List<Category> caseworkTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_CaseworkTags);
+            List<Element> caseworkTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_CaseworkTags);
 
 
 

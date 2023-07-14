@@ -13,17 +13,17 @@ namespace TagSelectedViews
 
         #region Categories
 
-        internal static List<Category> GetCategoryByName(Document curDoc, BuiltInCategory bicTags)
+        internal static List<Element> GetCategoryByName(Document curDoc, BuiltInCategory bicTags)
         {
-            List<Category> m_returnCat = new List<Category>();
+            List<Element> m_returnCat = new List<Element>();
 
             FilteredElementCollector m_colCat = new FilteredElementCollector(curDoc)
-                .OfCategory(bicTags);
+                .OfCategory(bicTags)
+                .WhereElementIsElementType();
 
-
-            foreach (Category c in m_colCat)
+            foreach (Element curCat in m_colCat)
             {
-                m_returnCat.Add(c);
+                m_returnCat.Add(curCat);
             }
 
             return m_returnCat;
@@ -51,6 +51,31 @@ namespace TagSelectedViews
             }
 
             return null;
+        }
+
+        #endregion
+
+        #region Views
+
+        public static ICollection<View> GetSelectedViews(Document doc)
+        {
+            UIDocument uidoc = new UIDocument(doc);
+
+            // Get the selected elements from the UIDocument
+            ICollection<ElementId> selectedElementIds = uidoc.Selection.GetElementIds();
+
+            // Filter out the views from the selected elements
+            ICollection<View> selectedViews = new List<View>();
+            foreach (ElementId elementId in selectedElementIds)
+            {
+                Element element = doc.GetElement(elementId);
+                if (element is View view)
+                {
+                    selectedViews.Add(view);
+                }
+            }
+
+            return selectedViews;
         }
 
         #endregion
