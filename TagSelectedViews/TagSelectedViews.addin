@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Tag Selected Views">
+    <Text>Command TagSelectedViews</Text>
+    <Description>Some description for TagSelectedViews</Description>
+    <Assembly>TagSelectedViews.dll</Assembly>
+    <FullClassName>TagSelectedViews.cmdTagSelectedViews</FullClassName>
+    <ClientId>5d755136-c4a4-49a6-9df7-cbcf1dc3c5d1</ClientId>
+    <VendorId>ArchCoder</VendorId>
+    <VendorDescription>ArchCoder</VendorDescription>
+  </AddIn>
+  <AddIn Type="Application">
+    <Name>Application TagSelectedViews</Name>
+    <Assembly>TagSelectedViews.dll</Assembly>
+    <FullClassName>TagSelectedViews.App</FullClassName>
+    <ClientId>64f8d674-c646-485c-af72-786f941e5ee5</ClientId>
+    <VendorId>ArchCoder</VendorId>
+    <VendorDescription>ArchCoder</VendorDescription>
+  </AddIn>
+</RevitAddIns>
