@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RevitAddIns>
-  <AddIn Type="Tag Selected Views">
+  <AddIn Type="Command">
     <Text>Command TagSelectedViews</Text>
     <Description>Some description for TagSelectedViews</Description>
     <Assembly>TagSelectedViews.dll</Assembly>

@@ -16,21 +16,22 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>                      
         </Grid.RowDefinitions>
-
-        <DataGrid x:Name="sheetGrid" Grid.Row="2"
+        <DataGrid x:Name="dataGrid" Grid.Row="2"
                   GridLinesVisibility="All"
-                  AlternatingRowBackground="AliceBlue" 
-                  CanUserAddRows="True" 
-                  SelectionMode="Single" 
+                  CanUserAddRows="False" 
+                  SelectionMode="Extended"
                   AutoGenerateColumns="False"
                   EnableColumnVirtualization="False"
                   EnableRowVirtualization="False">
             <DataGrid.Columns>
                 <DataGridCheckBoxColumn Width="10" IsReadOnly="False"/>
                 <DataGridTextColumn Header="Category" Width="*" IsReadOnly="False"/>
-                <DataGridTextColumn Header="Loaded Tags" Width="*" IsReadOnly="False"/>
+                <DataGridComboBoxColumn x:Name="cmbTags" Width="*" Header="Loaded Tags" IsReadOnly="False"/>
             </DataGrid.Columns>
         </DataGrid>
-
+        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button x:Name="btnOK" Width="90" Content="OK" Height="30" Margin="0,0,10,0" Click="btnOK_Click"/>
+            <Button x:Name="btnCancel" Width="90" Content="Cancel" Height="30" Click="btnCancel_Click"/>
+        </StackPanel>
     </Grid>
 </Window>

@@ -36,6 +36,10 @@ namespace TagSelectedViews
 
             // get all the tags for the categories
             List<Element> caseworkTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_CaseworkTags);
+            List<Element> detailTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_DetailComponents);
+            List<Element> doorTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_Doors;
+            List<Element> electricalTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_ElectricalFixtures);
+
 
 
 
