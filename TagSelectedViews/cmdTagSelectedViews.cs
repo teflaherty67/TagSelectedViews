@@ -28,6 +28,14 @@ namespace TagSelectedViews
 
             // put any code needed for the form here
 
+            //create a list of the categories
+            List<string> cats = new List<string>{ "Casework", "Detail Items", "Doors", "Electrical Fixtures",
+                "Generic Models", "Lighting Fixtures", "Mechanical Equipment", "Multi-Category",
+                "Plumbing Fixtures", "Property Line Segments", "Rooms", "Specialty Equipment",
+                "Staris", "Structrual Columns", "Structural Framing", "Walls", "Windows" };
+
+
+
             // open form
             frmTagSelectedViews curForm = new frmTagSelectedViews()
             {
