@@ -32,16 +32,26 @@ namespace TagSelectedViews
             List<string> cats = new List<string>{ "Casework", "Detail Items", "Doors", "Electrical Fixtures",
                 "Generic Models", "Lighting Fixtures", "Mechanical Equipment", "Multi-Category",
                 "Plumbing Fixtures", "Property Line Segments", "Rooms", "Specialty Equipment",
-                "Staris", "Structrual Columns", "Structural Framing", "Walls", "Windows" };
+                "Stairs", "Structrual Columns", "Structural Framing", "Walls", "Windows" };
 
             // get all the tags for the categories
             List<Element> caseworkTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_CaseworkTags);
-            List<Element> detailTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_DetailComponents);
-            List<Element> doorTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_Doors;
+            List<Element> detailTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_DetailComponentTags);
+            List<Element> doorTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_DoorTags);
             List<Element> electricalTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_ElectricalFixtures);
-
-
-
+            List<Element> genericTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_GenericModelTags);
+            List<Element> lightingTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_LightingFixtureTags);
+            List<Element> mechanicalTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_MechanicalEquipmentTags);
+            List<Element> multiTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_MultiCategoryTags);
+            List<Element> plumbingTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_PlumbingFixtureTags);
+            List<Element> propertyTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_SitePropertyLineSegmentTags);
+            List<Element> roomTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_RoomTags);
+            List<Element> specialtyTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_SpecialityEquipmentTags);
+            List<Element> stairTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_StairsTags);
+            List<Element> columnTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_StructuralColumnTags);
+            List<Element> framingTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_StructuralFramingTags);
+            List<Element> wallTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_WallTags);
+            List<Element> windowTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_WindowTags);
 
             // open form
             frmTagSelectedViews curForm = new frmTagSelectedViews()

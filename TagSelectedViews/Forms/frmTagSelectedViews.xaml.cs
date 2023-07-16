@@ -26,6 +26,11 @@ namespace TagSelectedViews
             InitializeComponent();
         }
 
+        private void btnSelect_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         private void btnOK_Click(object sender, RoutedEventArgs e)
         {
 
@@ -35,5 +40,10 @@ namespace TagSelectedViews
         {
 
         }
+
+        private void btnHelp_Click(object sender, RoutedEventArgs e)
+        {
+
+        }        
     }
 }

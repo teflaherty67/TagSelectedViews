@@ -5,17 +5,20 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TagSelectedViews"
              mc:Ignorable="d" 
-             d:DesignHeight="500" d:DesignWidth="800" Title="Tag All in Selected Views">
-    <Grid>
+             d:DesignHeight="500" d:DesignWidth="600" Title="Tag All in Selected Views">
+    <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="30"/>                      
         </Grid.RowDefinitions>
+        <Label Content="Select at least one Category and Tag to annotate non-annotated objects:"/>
         <DataGrid x:Name="dataGrid" Grid.Row="2"
                   GridLinesVisibility="All"
                   CanUserAddRows="False" 
@@ -29,9 +32,31 @@
                 <DataGridComboBoxColumn x:Name="cmbTags" Width="*" Header="Loaded Tags" IsReadOnly="False"/>
             </DataGrid.Columns>
         </DataGrid>
-        <StackPanel Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Right">
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <CheckBox x:Name="cbxLeader" Content="Leader" VerticalAlignment="Center"/>
+            <Label Grid.Column="1" Content="Leader Length:" HorizontalAlignment="Right"/>
+            <TextBox x:Name="tbxLength" Grid.Column="2" Width="150" HorizontalAlignment="Left"/>
+            <Button x:Name="btnSelect" Grid.Column="3" HorizontalAlignment="Right" Width="100" Content="Select" Click="btnSelect_Click"/>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Column="1" Content="Tag Orientation:" HorizontalAlignment="Right"/>
+            <ComboBox x:Name="cbxOrientation" Grid.Column="2" Width="150" HorizontalAlignment="Left"/>
+        </Grid>
+        <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="btnOK" Width="90" Content="OK" Height="30" Margin="0,0,10,0" Click="btnOK_Click"/>
-            <Button x:Name="btnCancel" Width="90" Content="Cancel" Height="30" Click="btnCancel_Click"/>
+            <Button x:Name="btnCancel" Width="90" Content="Cancel" Height="30" Click="btnCancel_Click" Margin="0,0,10,0"/>
+            <Button x:Name="btnHelp" Width="90" Height="30" Content="Help" Click="btnHelp_Click"/>
         </StackPanel>
     </Grid>
 </Window>
