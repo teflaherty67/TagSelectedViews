@@ -71,6 +71,24 @@ namespace TagSelectedViews
 
             // get form data and do something
 
+            // set leader variable
+            string tLeader = "";
+
+            if(curForm.GetCheckBoxLeader() == true)
+            {
+                tLeader = "true";
+            }
+            else
+                tLeader = "false";
+
+            // set leader length
+            double lLength;
+
+
+
+            // set leader orientation
+            string tOrient = curForm.GetComboboxOrient();            
+
             return Result.Succeeded;
         }
 

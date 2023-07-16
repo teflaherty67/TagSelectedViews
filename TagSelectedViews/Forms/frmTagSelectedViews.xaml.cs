@@ -47,7 +47,7 @@ namespace TagSelectedViews
             if (cBox.IsChecked == true) { tbxLength.IsEnabled = true; }            
         }
 
-        internal bool GetCheckBox1()
+        internal bool GetCheckBoxLeader()
         {
             if (cbxLeader.IsChecked == true)
                 return true;
@@ -55,9 +55,9 @@ namespace TagSelectedViews
             return false;
         }
 
-        internal string GetTextBoxLength()
+        internal double GetTextBoxLength()
         {
-            return tbxLength.Text;
+            return tbxLength.Text.Length;
         }
 
         internal string GetComboboxOrient()
