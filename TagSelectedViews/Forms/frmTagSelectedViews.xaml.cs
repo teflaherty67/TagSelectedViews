@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -24,21 +25,61 @@ namespace TagSelectedViews
         public frmTagSelectedViews()
         {
             InitializeComponent();
+
+            // create list of tag orientations
+            List<string> listTagOrients = new List<string> { "Horizontal", "Vertical" };
+
+            // populate the orientation combobox
+            foreach (string tagOrient in listTagOrients)
+            {
+                cmbOrientation.Items.Add(tagOrient);
+            }
+
+            cmbOrientation.SelectedIndex = 0;
+        }
+
+        private void cbxLeader_Checked(object sender, RoutedEventArgs e)
+        {
+            // if checked make length text box active
+
+            CheckBox cBox = (CheckBox)sender;
+
+            if (cBox.IsChecked == true) { tbxLength.IsEnabled = true; }            
+        }
+
+        internal bool GetCheckBox1()
+        {
+            if (cbxLeader.IsChecked == true)
+                return true;
+
+            return false;
+        }
+
+        internal string GetTextBoxLength()
+        {
+            return tbxLength.Text;
+        }
+
+        internal string GetComboboxOrient()
+        {
+            return cmbOrientation.Text.ToString();
         }
 
         private void btnSelect_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
         private void btnOK_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = true;
+            this.Close();
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DialogResult = false;
+            this.Close();
         }
 
         private void btnHelp_Click(object sender, RoutedEventArgs e)

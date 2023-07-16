@@ -39,9 +39,9 @@
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <CheckBox x:Name="cbxLeader" Content="Leader" VerticalAlignment="Center"/>
-            <Label Grid.Column="1" Content="Leader Length:" HorizontalAlignment="Right"/>
-            <TextBox x:Name="tbxLength" Grid.Column="2" Width="150" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="cbxLeader" Content="Leader" VerticalAlignment="Center" IsChecked="False" Checked="cbxLeader_Checked"/>
+            <Label Grid.Column="1" Content="Leader Length:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <TextBox x:Name="tbxLength" Grid.Column="2" Width="150" HorizontalAlignment="Left" IsEnabled="False" VerticalAlignment="Center"/>
             <Button x:Name="btnSelect" Grid.Column="3" HorizontalAlignment="Right" Width="100" Content="Select" Click="btnSelect_Click"/>
         </Grid>
         <Grid Grid.Row="6">
@@ -50,8 +50,8 @@
                 <ColumnDefinition Width="100"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="1" Content="Tag Orientation:" HorizontalAlignment="Right"/>
-            <ComboBox x:Name="cbxOrientation" Grid.Column="2" Width="150" HorizontalAlignment="Left"/>
+            <Label Grid.Column="1" Content="Tag Orientation:" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <ComboBox x:Name="cmbOrientation" Grid.Column="2" Width="150" HorizontalAlignment="Left" VerticalAlignment="Center"/>
         </Grid>
         <StackPanel Grid.Row="8" Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="btnOK" Width="90" Content="OK" Height="30" Margin="0,0,10,0" Click="btnOK_Click"/>

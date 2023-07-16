@@ -53,6 +53,11 @@ namespace TagSelectedViews
             List<Element> wallTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_WallTags);
             List<Element> windowTags = Utils.GetCategoryByName(curDoc, BuiltInCategory.OST_WindowTags);
 
+            // create list of tag orientations
+            List<string> listTagOrients = new List<string> { "Horizontal", "Vertical" };
+
+           
+
             // open form
             frmTagSelectedViews curForm = new frmTagSelectedViews()
             {
